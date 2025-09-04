@@ -10,10 +10,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center  border-r border-gray-300  h-screen w-60">
+    <div className="flex flex-col items-center py-4  border-r border-gray-300  h-screen w-60">
       <div
         className="mb-4 text-2xl font-bold cursor-pointer"
-        onClick={() => (window.location.href = "/")}
       >
         <span>Tour agency</span>
       </div>
@@ -21,6 +20,7 @@ const Navbar = () => {
         theme="light"
         mode="vertical"
         className="w-full !border-none"
+        selectedKeys={["/" + location.pathname.split("/")[1]]}
         items={navbar.map((item) => ({
           key: item.link,
           label: <Link to={item.link}>{item.name}</Link>,

@@ -2,7 +2,7 @@ import { Button, message, Space } from "antd";
 import { useDeleteUser, useGetUsers } from "../../api/users/userAPI";
 import type { User } from "../../types";
 import { useNavigate } from "react-router-dom";
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
+import { DeleteOutlined, EditOutlined, MoreOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
 const Users = () => {
@@ -93,6 +93,15 @@ const Users = () => {
                   }}
                 >
                   <DeleteOutlined />
+                </Button>
+                <Button
+                  type="primary"
+                  color="green"
+                  onClick={() => {
+                    navigate(`${u?._id}`);
+                  }}
+                >
+                  <MoreOutlined />
                 </Button>
               </td>
             </tr>

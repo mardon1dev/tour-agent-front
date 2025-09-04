@@ -7,6 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
 import Login from "./pages/login/Login";
 import AddEditUser from "./pages/users/AddEditUser";
+import SingleUser from "./pages/users/SingleUser";
 import AddEditPlace from "./pages/places/AddEditPlace";
 import SinglePlace from "./pages/places/SinglePlace";
 
@@ -35,6 +36,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/users" element={<Users />} />
+              <Route path="/users/:id" element={<SingleUser />} />
               <Route path="/users/add-user" element={<AddEditUser />} />
               <Route path="/users/edit-user/:id" element={<AddEditUser />} />
               <Route path="/places" element={<Places />} />
